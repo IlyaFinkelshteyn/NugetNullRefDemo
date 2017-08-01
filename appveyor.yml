@@ -3,6 +3,7 @@ os:
 - Visual Studio 2017
 install:
 - echo %appveyor_build_worker_image%
+- appveyor downloadfile https://dist.nuget.org/win-x86-commandline/v4.3.0-preview3/nuget.exe
 - nuget | findstr /psi "version"
 
 - ps: write-host "before vs command prompt:"
